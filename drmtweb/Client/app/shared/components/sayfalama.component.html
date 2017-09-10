@@ -1,0 +1,20 @@
+﻿<ul *ngIf="pager.pages && pager.pages.length" class="pagination cursorpointer">
+    <li [ngClass]="{disabled:pager.currentPage === 1}">
+        <a (click)="setPage(1)">İlk</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === 1}">
+        <a (click)="setPage(pager.currentPage - 1)">Önceki</a>
+    </li>
+    <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+        <a (click)="setPage(page)">{{page}}</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+        <a (click)="setPage(pager.currentPage + 1)">Sonraki</a>
+    </li>
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+        <a (click)="setPage(pager.totalPages)">Son</a>
+    </li>
+    <li >
+        <a style="background-color:lightgray" (click)="setPage(sayfa.value)">Sayfa <input #sayfa type="number" [(ngModel)]="pager.currentPage"  style="font-size:0.9em;font-weight:700;background-color:lightgray;color:black;text-align:center" [max]="pager.totalPages" min="0" /> <span style="color:forestgreen">Git</span></a>
+    </li>
+</ul>

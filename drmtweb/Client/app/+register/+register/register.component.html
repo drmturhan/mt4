@@ -1,0 +1,35 @@
+﻿<div class="container">
+    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <img src="https://drmturhan.blob.core.windows.net/mtcdn/kaliptuslogo.svg" style="width:56px; max-width:100px;">
+                    <span style="font-family:Vivaldi;font-size:20px;font-weight:700">Kaliptus</span> Medikal Organizasyon'a Hoşgeldiniz
+                </div>
+                <!--<div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>-->
+            </div>
+            <div style="padding:30px" class="panel-body">
+
+                <div class="card">
+                    <div class="card-header">
+                        Üye Olmak için aşağıdaki formu eksiksiz doldurun...
+                    </div>
+                    <div class="card-block" style="margin:20px">
+                        <appc-error-summary [errors]="errors"></appc-error-summary>
+                        <appc-dynamic-form (formsubmit)="register($event)" [controls]="controls" [btnText]="'Üye Ol'"></appc-dynamic-form>
+
+                    </div>
+                </div>
+
+                <!--<p class="text-center font-weight-bold">
+                    OR
+                </p>-->
+                <!--<div class="text-center">
+                    <appc-social-login></appc-social-login>
+                </div>-->
+
+            </div>
+        </div>
+    </div>
+
+</div>

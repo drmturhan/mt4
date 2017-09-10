@@ -1,0 +1,18 @@
+﻿<div class="alert alert-info" *ngIf="yukleniyor || veritabaniIslemiVar" style="position: fixed;top: 40%;left: 40%;z-index:10;text-align:center">
+    <i class="fa fa-spinner fa-pulse fa-5x" aria-hidden="true"></i>
+    <p >
+        Lütfen bekleyiniz...
+    </p>
+</div>
+
+<!-- header component -->
+<appc-header></appc-header>
+
+<!-- component routing placeholder -->
+<router-outlet></router-outlet>
+
+<!-- footer component -->
+<appc-footer></appc-footer>
+
+
+<toaster-container [toasterconfig]="toasterconfig"></toaster-container>

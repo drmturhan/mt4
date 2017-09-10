@@ -1,0 +1,22 @@
+﻿<appc-page-heading text="Kullanıcı Adınızı Değiştirin"></appc-page-heading>
+
+<form class="form-horizontal" #hf="ngForm">
+    <div class="form-group">
+        <label for="firstName">Adı</label>
+        <input type="text" [class.error]="!firstName.valid" class="form-control input-lg" placeholder="Adı" [(ngModel)]="userNameModel.firstName"
+            name="firstName" ngControl="firstName" required #firstName="ngModel" />
+        <label *ngIf="!firstName.valid && firstName.touched" class="error">
+                        Ad alanı gerekli
+            </label>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Soyadı</label>
+        <input type="text" [class.error]="!lastName.valid" class="form-control input-lg" placeholder="Soyadı" [(ngModel)]="userNameModel.lastName"
+            name="lastName" ngControl="lastName" required #lastName="ngModel" />
+        <label *ngIf="!lastName.valid && lastName.touched" class="error">
+                            Soyadı alanı gerekli
+                        </label>
+    </div>
+
+    <button class="btn btn-success pull-right" (click)="save()" [disabled]="!hf.form.valid">Kaydet</button>
+</form>

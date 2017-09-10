@@ -1,0 +1,13 @@
+﻿<div>
+    <appc-page-heading text="Üyelik süreci başladı!">
+    </appc-page-heading>
+
+    <p *ngIf="!emailConfirmed">
+        Sisteme üye olabilmeniz için Sistem yöneticisi tarafından onay gerekiyor.
+        Lütfen onay bilgisini aldıktan sonra sisteme giriş yapın.
+    </p>
+
+    <p *ngIf="emailConfirmed">
+        Sistemi kullanmak için lütfen <a routerLink="/sistem/giris">Giriş</a> yapın..
+    </p>
+</div>#
